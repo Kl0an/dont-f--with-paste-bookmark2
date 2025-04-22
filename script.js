@@ -1,3 +1,4 @@
+// Função para remover bloqueios de copiar, colar e cortar
 function removeBlock() {
     const preventDefault = function(e) {
         e.stopImmediatePropagation();
@@ -5,12 +6,13 @@ function removeBlock() {
         return true;
     };
 
+    // Adiciona ouvintes de eventos para copiar, cortar e colar
     document.addEventListener("copy", preventDefault, true);
     document.addEventListener("cut", preventDefault, true);
     document.addEventListener("paste", preventDefault, true);
     
-    alert("Block Removed!");
+    alert("Bloqueios de copiar, colar e cortar foram removidos!");
 }
 
-// Chame a função para remover o bloqueio
+// Chama a função para remover o bloqueio
 removeBlock();
